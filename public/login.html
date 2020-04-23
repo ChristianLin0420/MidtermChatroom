@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body onload="initLogin()">
+    <div class="videoBG">
+        <video src="video/SF.MOV" muted loop autoplay type="MOV"></video>
+        <div class="textBox">
+            Chat
+            <span>Room</span>
+        </div>
+    </div>
+    <div class="digitalClock">
+        <div id="clock">
+            <h2>The time is now</h2>
+            <div id="time">
+                <div><span id="hour">00</span><span>Hours</span></div>
+                <div><span id="minute">00</span><span>Minutes</span></div>
+                <div><span id="second">00</span><span>Seconds</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="connectContainer">
+        <span id="connectMe">Connect me</span>
+        <div id="connectBox">
+            <i class="fa fa-github" aria-hidden="true" id="connectGithub"></i>
+            <i class="fa fa-linkedin" aria-hidden="true" id="connectLinkedin"></i>
+            <i class="fa fa-instagram" aria-hidden="true" id="connectInstagram"></i>
+        </div>
+    </div>
+      
+    <form class="LoginBox">
+        <h1>Login</h1>
+        <input type="email" name="" id="Email" placeholder="Username">
+        <input type="password" name="" id="Password" placeholder="Password">
+        <button class="btn btn-lg btn-primary btn-block" id="SignIn">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" id="SignUp">Sign up</button>
+        <h2>Login With</h2>
+        <div class="LoginContainer">
+            <i class="fa fa-facebook" aria-hidden="true" id="Facebook"></i>
+            <i class="fa fa-google" aria-hidden="true" id="Google"></i>
+            <i class="fa fa-twitter" aria-hidden="true" id="Twitter"></i>
+        </div>
+    </form>
+</body>
+</html> 
