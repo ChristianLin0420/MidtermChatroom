@@ -47,17 +47,19 @@ function initLogin() {
     });
 
     btnSignup.addEventListener('click', function() {
-        var email = txtEmail.value;
-        var pass = txtPassword.value;
+        // var email = txtEmail.value;
+        // var pass = txtPassword.value;
 
-        firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
-            create_alert("success", "");
-        }).catch(function(err) {
-            var errMes = err.message;
-            create_alert("error", errMes);
-            txtEmail.value = "";
-            txtPassword.value = "";
-        });
+        // firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
+        //     create_alert("success", "");
+        // }).catch(function(err) {
+        //     var errMes = err.message;
+        //     create_alert("error", errMes);
+        //     txtEmail.value = "";
+        //     txtPassword.value = "";
+        // });
+
+        window.location.href = "signup.html";
     });
 
     btnGoogle.addEventListener('click', function() {

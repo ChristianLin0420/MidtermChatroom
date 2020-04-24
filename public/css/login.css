@@ -140,6 +140,9 @@ body {
     height: 20%;
     margin: 5px;
     text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #191919;
 }
 .connectContainer #connectBox {
     position: absolute;
@@ -234,24 +237,30 @@ body {
     display: block;
     margin: 10px auto;
     text-align: center;
-    border: 2px solid #0dec6a;
     padding: 14px 10px;
     width: 60%;
     height: 45px;
     outline: none;
-    color: #fff;
-    font-weight: 400;
+    color: rgb(185, 185, 185);
+    font-size: 12px;
+    font-weight: 600;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
     bottom: 0px;
+}
+.LoginBox #SignIn {
+    border: 2px solid #0dec6a;
+}
+.LoginBox #SignUp {
+    border: 2px solid #ff006a;
 }
 .LoginBox #SignIn:hover {
     background: #0dec6a;
     color:#191919;
 }
 .LoginBox #SignUp:hover {
-    background: #0dec6a;
+    background: #ff006a;
     color: #191919;
 }
 .LoginBox h2 {
@@ -281,8 +290,8 @@ body {
     font-size: 24px;
 }
 .LoginBox .fa-facebook {
-    border: 2px solid #5d90f5;
-    color: #5d90f5;
+    border: 2px solid #5481db;
+    color: #5481db;
 }
 .LoginBox .fa-google {
     border: 2px solid #fff;
@@ -293,7 +302,7 @@ body {
     color: #009ade;
 }
 .LoginBox .fa-facebook:hover {
-    background: #5d90f5;
+    background: #5481db;
     color: #fff;
 }
 .LoginBox .fa-google:hover {
