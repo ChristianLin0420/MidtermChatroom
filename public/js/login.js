@@ -34,12 +34,11 @@ function initLogin() {
         var password = txtPassword.value;
 
         firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-            console.log('Successfully login!!');
             create_alert('success', message)
+            alert('Successfully login!!');
             //window.location.href = 'chatroom.html';
         }).catch(function(error) {
             var errMes = error.message;
-            console.log(errMes);
             create_alert("error", errMes);
             txtEmail.value = "";
             txtPassword.value = "";
@@ -47,19 +46,19 @@ function initLogin() {
     });
 
     btnSignup.addEventListener('click', function() {
-        // var email = txtEmail.value;
-        // var pass = txtPassword.value;
+        var email = txtEmail.value;
+        var pass = txtPassword.value;
 
-        // firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
-        //     create_alert("success", "");
-        // }).catch(function(err) {
-        //     var errMes = err.message;
-        //     create_alert("error", errMes);
-        //     txtEmail.value = "";
-        //     txtPassword.value = "";
-        // });
-
-        window.location.href = "signup.html";
+        firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
+            create_alert("success", "");
+            window.location.href = "signup.html";
+        }).catch(function(err) {
+            var errMes = err.message;
+            //create_alert("error", errMes);
+            txtEmail.value = "";
+            txtPassword.value = "";
+            window.location.href = "signup.html";
+        });
     });
 
     btnGoogle.addEventListener('click', function() {
