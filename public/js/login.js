@@ -33,11 +33,14 @@ function initLogin() {
         var email = txtEmail.value;
         var password = txtPassword.value;
 
+        //alert('email: ' + email +' \n password: ' + password);
+
         firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-            create_alert('success', message)
-            alert('Successfully login!!');
-            //window.location.href = 'chatroom.html';
+            console.log('asdf');
+            create_alert('success', 'message')
+            window.location.href = "chatroom.html";
         }).catch(function(error) {
+            console.log('sdfg');
             var errMes = error.message;
             create_alert("error", errMes);
             txtEmail.value = "";
@@ -49,12 +52,15 @@ function initLogin() {
         var email = txtEmail.value;
         var pass = txtPassword.value;
 
+        alert('email: ' + email +' \n password: ' + password);
+
         firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
             create_alert("success", "");
             window.location.href = "signup.html";
         }).catch(function(err) {
             var errMes = err.message;
-            //create_alert("error", errMes);
+            alert('asddd');
+            create_alert("error", errMes);
             txtEmail.value = "";
             txtPassword.value = "";
             window.location.href = "signup.html";
@@ -94,4 +100,8 @@ function create_alert(type, message) {
     } else if (type == "error") {
         alert('Cannot sign in!!')
     }
+}
+
+window.onload = function() {
+    initLogin();
 }
