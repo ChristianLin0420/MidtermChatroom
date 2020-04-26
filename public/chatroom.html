@@ -22,9 +22,52 @@
     <script src="js/chatroom.js"></script>
 </head>
 <body>
-    <form onsubmit="return sendMessage();">
+    <!-- <form onsubmit="return sendMessage();">
         <input id="message" placeholder="Enter message" autocomplete="off">
         <input type="submit">
-    </form>
+    </form> -->
+    <div class="title">
+        <img src="img/CharRoomTitle.png" alt="chatroomtitle">
+    </div>
+    <div class="chatroom">
+        <div class="history">
+            <div class="searchUser">
+                <input type="text" placeholder="Search....">
+                <button id="test" onclick="addUser()">Find</button>
+            </div>
+            <ul id="friendChatHistory">
+                <li>
+                    <img src="img/Tzuyu.png" alt="avatar">
+                    <span>Tzuyu</span>
+                    <h3>Hello World! One in a million! We are Twice</h3>
+                    <h4>2020 / 4 / 26</h4>
+                </li>
+                <li>
+                    <img src="img/Tzuyu.png" alt="avatar">
+                    <span>Tzuyu</span>
+                    <h3>Hello World! One in a million! We are Twice</h3>
+                    <h4>2020 / 4 / 26</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="chatblock">
+            <ul id="chatRecord">
+                <li>user1</li>
+                <li>user1</li>
+                <li>user1</li>
+            </ul>
+            <div id="sendBox">
+                <input type="text" id="sendMsg" placeholder="   Send something....">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+        <div class="friendInfo">
+            <img src="img/Tzuyu.png" alt="avatar">
+            <h2>Tzuyu</h2>
+            <h3>1999 / 6 / 14</h3>
+        </div>
+    </div>
+
+
 </body>
 </html>

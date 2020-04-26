@@ -1,13 +1,19 @@
-var myName = prompt("Enter your name");
+// var myName = prompt("Enter your name");
 
-function sendMessage() {
-    var message = document.getElementById('message').value;
+// function sendMessage() {
+//     var message = document.getElementById('message').value;
 
-    firebase.database().ref("messages").push().set({
-        "sender": myName,
-        "message": message
-    });
+//     firebase.database().ref("messages").push().set({
+//         "sender": myName,
+//         "message": message
+//     });
 
     
-    return false;
+//     return false;
+// }
+
+
+function addUser() {
+    var newUser = document.getElementById('friendChatHistory');
+    newUser.innerHTML += "<li>user1";
 }
