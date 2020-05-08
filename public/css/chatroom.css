@@ -10,20 +10,39 @@ body {
 
 .title {
     position: absolute;
-    top: 0px;
+    top: -1px;
     left: 0px;
     bottom: 0px;
     width: 100%;
     height: 12%;
-    background: #cae1f8;
+    border-bottom: 1px solid #929292;
+    background: #000000;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 .title img {
     position: absolute;
-    width: 20%;
-    
+    width: 20%;   
+}
+.title button {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    height: 50%;
+    width: 12%;
+    outline: none;
+    border: 2px solid #92ff60;
+    color: #92ff60;
+    font-weight: 500;
+    font-size: 18px;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.title button:hover {
+    background: #92ff60;
+    color: #0e0e0e;
 }
 
 .chatroom {
@@ -32,7 +51,7 @@ body {
     left: 0px;
     width: 100%;
     height: 88%;
-    background-color: #aff5e9;
+    background-color: #0e0e0e;
 }
 
 .history {
@@ -48,12 +67,17 @@ body {
     left: 0px;
     width: 100%;
     height: 10%;
-    background: #c3eb7a;
+    background: #0e0e0e;
     align-items: center;
     justify-content: center;
     display: flex;
 }
-
+.history .searchUser {
+    color: #ffc400;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+}
 .history #friendChatHistory {
     position: absolute;
     margin: 0;
@@ -68,39 +92,42 @@ body {
 }
 .history #friendChatHistory li {
     position: relative;
-    top: 1px;
     margin: 0;
     padding: 0;
-    border-top: 2px solid #000000;
-    background: #cae1f8;
+    background: #0e0e0e;
     width: 100%;
     height: 12%;
+    cursor: pointer;
 }
 .history #friendChatHistory li:hover {
-    background: #96eecc;
+    background: #2c2c2c;
 }
 .history #friendChatHistory li img {
     position: absolute;
-    top: 5%;
-    height: 90%;
+    top: 15%;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    left: 5px;
 }
 .history #friendChatHistory li span {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 20%;
-    right: 10px;
+    top: 15%;
+    left: 34%;
     width: 67%;
     height: 30%;
     font-weight: 600;
     font-size: 20px;
+    color: #fff;
 }
 .history #friendChatHistory li h3 {
     position: absolute;
     margin: 0;
     padding: 0;
     top: 50%;
-    right: 10px;
+    left: 35%;
     width: 67%;
     height: 30%;
     font-weight: 400;
@@ -108,6 +135,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #c2c2c2;
 }
 .history #friendChatHistory li h4 {
     position: absolute;
@@ -120,6 +148,7 @@ body {
     font-weight: 400;
     font-size: 12px;
     text-align: right;
+    color: #fff;
 }
 
 .chatblock {
@@ -128,19 +157,106 @@ body {
     left: 20%;
     width: 60%;
     height: 100%;
-    background: #a6a8f7;
+    background: #252525;
+    border-left: 1px solid #696969;
+}
+.chatblock #friend {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 14%;
+    background: #111111;
+}
+.chatblock #friend img {
+    position: absolute;
+    top: 13%;
+    left: 20px;
+    height: 9vh;
+    width: 9vh;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.chatblock #friend span {
+    position: absolute;
+    top: 20%;
+    left: 110px;
+    height: 30%;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+}
+.chatblock #friend h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 70%;
+    left: 110px;
+    height: 20%;
+    color: #92ff60;
+    font-size: 15px;
+    font-weight: 500;
+}
+.chatblock #chatRecord {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 15%;
+    left: 0px;
+    width: 100%;
+    height: 70%;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+.chatblock #chatRecord #user1, .chatblock #chatRecord #user2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+}
+.chatblock #chatRecord #user1 img {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    height: 25px;
+    border-radius: 50%;
+}
+.chatblock #chatRecord #user1 span, .chatblock #chatRecord #user2 span {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    padding: 1% 2%;
+    border-radius: 20px;
+    font-size: 16px;
+    background: #fff;
+    display: inline-block;
+    text-overflow: inherit;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    max-width: 50%;
+}
+.chatblock #chatRecord #user1 span {
+    left: 45px;
+    background: #1483ce;
+    color: #fff;
+}
+.chatblock #chatRecord #user2 span {
+    right: 20px;
 }
 .chatblock #sendBox {
     position: absolute;
-    left: 5%;
-    bottom: 3%;
-    width: 90%;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
     height: 12%;
-    background: #b1f5f5;
+    background:none;
     align-items: center;
     justify-content: center;
     display: flex;
-    border-radius: 20px;
+    background: #0e0e0e;
 }
 .chatblock #sendBox #sendMsg {
     width: 70%;
@@ -148,6 +264,10 @@ body {
     border-radius: 10px;
     font-size: 16px;
     border: 1px solid #a6a8f7;
+    background: none;
+    color: #c2c2c2;
+    outline: none;
+    padding-left: 15px;
 }
 .chatblock #sendBox #sendBtn {
     width: 15%;
@@ -155,40 +275,258 @@ body {
     border: 2px solid #3498db;
     color: #3498db;
     border-radius: 10px;
-    background: #fff;
+    background: none;
     font-size: 16px;
     cursor: pointer;
     margin: 10px;
+    outline: none;
 }
 .chatblock #sendBox #sendBtn:hover {
     color: #fff;
     background: #3498db;
 }
 
-.friendInfo {
+.friendBox {
     position: absolute;
     top: 0px;
     left: 80%;
     width: 20%;
     height: 100%;
-    background: #ebcbfa;
+    background: #0e0e0e;
     align-items: center;
     justify-content: center;
     display: flex;
+    border-left: 1px solid #929292;
 }
-.friendInfo img {
+.friendBox #friendImg {
     position: absolute;
-    top: 3%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.friendBox #friendImage {
+    position: absolute;
+    height: 16vh;
+    width: 16vh;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: -2px -2px 6px #ffffff,
+                -2px -2px 6px #ffffff,
+                2px 2px 6px #ffffff,
+                2px 2px 6px #ffffff;
+}
+.friendBox h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 25%;
+    left: 0px;
+    width: 100%;
+    height: 5%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.friendBox h3 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 30%;
+    width: 100%;
+    height: 5%;
+    color: #afafaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.friendBox #birthday {
+    top: 30%;
+}
+.friendBox #email {
+    top: 35%;
+}
+.friendBox .friends {
+    position: absolute;
+    top: 45%;
+    left: 0px;
+    width: 100%;
+    height: 55%;
+}
+.friendBox span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1483ce;
+    font-weight: 700;
+    font-size: 24px;
+}
+.friendBox ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 18%;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 82%;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+.friendBox ul li {
+    position: relative;
+    background: transparent;
+    border: 2px solid #797979;
+    margin: 5px;
+    padding: 2%;
+    width: 84%;
+    left: 6%;
+    height: 20%;
+    border-radius: 10px;
+    display: flex;
+}
+.friendBox ul li img {
+    position: absolute;
+    top: 15%;
+    height: 7vh;
+    width: 7vh;
     border-radius: 50%;
 }
-.friendInfo h2 {
+.friendBox ul li h3 {
     position: absolute;
-    top: 25%;
-    color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+    top: 10%;
+    left: 36%;
+    width: 40%;
+    height: 40%;
+    color: #d8d8d8;
+    font-size: 16px;
+    justify-content: left;
 }
-.friendInfo h3 {
+.friendBox ul li button {
     position: absolute;
-    top: 30%;
-    color: #686868;
+    width: 30%;
+    height: 35%;
+    top: 55%;
+    right: 35%;
+    color: #1483ce;
+    background: none;
+    border-radius: 15px;
+    border: 1px solid #1483ce;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+.friendBox ul li button:hover {
+    color: #000;
+    background: #1483ce;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .friendBox #currentUser {
+        font-size: 18px;
+    }
+
+    .friendBox #emailLabel {
+        top: 28%;
+        font-size: 15px;
+    }
+
+    #newFriendsList li {
+        left: 3%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #friendChatHistory li span {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .history {
+        width: 8%;
+    }
+
+    .history .searchUser {
+        font-size: 12px;
+    }
+
+    .history #friendChatHistory li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history #friendChatHistory li img {
+        width: 80%;
+        height: auto;
+    }
+
+    .history #friendChatHistory li span, .history #friendChatHistory li h3, .history #friendChatHistory li h4 {
+        display: none;
+    }
+    .chatblock {
+        left: 8%;
+        width: 67%;
+    }
+
+    .friendBox {
+        width: 25%;
+        left: 75%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title img {
+        width: 40%;
+    }
+
+    .title button {
+        width: 18%;
+    }
+
+    .history {
+        width: 15%;
+    }
+
+    .chatblock {
+        left: 15%;
+        width: 85%;
+    }
+
+    .friendBox {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title img {
+        width: 50%;
+    }
+
+    .title button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .chatblock #friend span {
+        font-size: 25px;
+        top: 15%;
+        height: 30%;
+        font-weight: 600;
+    }
 }
