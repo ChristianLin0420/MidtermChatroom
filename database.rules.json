@@ -1,6 +1,28 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+    "individuals" : {
+      ".read" : true,
+      ".write" : true
+    },
+    "members" : {
+      "$memberID" : {
+        ".read" : true,
+        ".write" : true
+      }
+    },
+    "chats" : {
+      "$chatID" : {
+        ".read" : true,
+        ".write" : true
+      }
+    }, 
+    "messages" : {
+      "$messageID" : {
+        ".read" : true,
+        ".write" : true
+      }
+    },
+    ".read" : true,
+    ".write" : true
   }
 }
